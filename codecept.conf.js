@@ -2,13 +2,14 @@ exports.config = {
   output: './output',
   helpers: {
     Puppeteer: {
-      url: 'https://platzi.com',
+      url: 'https://www.phptravels.net/',
       show: true,
       windowSize: '1200x900'
     }
   },
   include: {
-    I: './steps_file.js'
+    I: './steps_file.js',
+		// LoginPage: "./pages/loginPage.js"
   },
   mocha: {},
   bootstrap: null,
@@ -16,7 +17,7 @@ exports.config = {
   hooks: [],
   gherkin: {
     features: './features/*.feature',
-    steps: ['./step_definitions/steps.js']
+    steps: ['./step_definitions/login.js']
   },
   plugins: {
     screenshotOnFail: {
