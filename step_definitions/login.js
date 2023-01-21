@@ -1,9 +1,5 @@
-const LoginPage = require("../pages/loginPage");
-
-const { I } = inject();
+const { I, login } = inject();
 // Add in your custom step files
-
-const login = new LoginPage()
 
 Given('The user is on login page', () => {
   login.visit()

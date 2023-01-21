@@ -1,6 +1,8 @@
+const { EMAIL, PASSWORD } = require("../globals")
+
 const { I } = inject()
 
-module.exports = class LoginPage {
+class LoginPage {
 	constructor() {
 		this.navbar = ".menu-wrapper"
 		this.inputEmail = "input[placeholder='Email']"
@@ -18,8 +20,8 @@ module.exports = class LoginPage {
 	submitLoginForm() {
 		I.waitForElement(this.inputEmail)
 
-		I.fillField(this.inputEmail, "user@phptravels.com")
-		I.fillField(this.inputPassword, "demouser")
+		I.fillField(this.inputEmail, EMAIL)
+		I.fillField(this.inputPassword, PASSWORD)
 		I.click(this.submitBtn)
 
 		I.wait(6)
@@ -29,3 +31,5 @@ module.exports = class LoginPage {
 		I.waitForElement("section.dashboard-area")
 	}
 }
+
+module.exports = new LoginPage()

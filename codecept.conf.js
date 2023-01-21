@@ -3,13 +3,13 @@ exports.config = {
   helpers: {
     Puppeteer: {
       url: 'https://www.phptravels.net/',
-      show: true,
+      show: false,
       windowSize: '1200x900'
     }
   },
   include: {
     I: './steps_file.js',
-		// LoginPage: "./pages/loginPage.js"
+		login: "./pages/loginPage.js"
   },
   mocha: {},
   bootstrap: null,
