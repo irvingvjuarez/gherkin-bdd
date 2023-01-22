@@ -17,11 +17,11 @@ class LoginPage {
 		I.seeInCurrentUrl("login")
 	}
 
-	submitLoginForm() {
+	submitLoginForm(email, password) {
 		I.waitForElement(this.inputEmail)
 
-		I.fillField(this.inputEmail, EMAIL)
-		I.fillField(this.inputPassword, PASSWORD)
+		I.fillField(this.inputEmail, email)
+		I.fillField(this.inputPassword, password)
 		I.click(this.submitBtn)
 
 		I.wait(6)
