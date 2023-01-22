@@ -5,7 +5,7 @@ Given('The user is on login page', () => {
   login.visit()
 });
 
-When(/The user logins into the page with the correct email: ".+" and password: ".+"/, (email, password) => {
+When(/The user logins into the page with the correct email: "(.+)" and password: "(.+)"/, (email, password) => {
 	login.submitLoginForm(email, password)
 })
 
