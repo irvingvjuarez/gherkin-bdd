@@ -5,6 +5,7 @@
 	"main": "index.js",
 	"scripts": {
 		"test": "npx codeceptjs run --features",
+		"test:outline": "npx codeceptjs run --grep '@outline'",
 		"codeceptjs": "codeceptjs run --steps",
 		"codeceptjs:headless": "HEADLESS=true codeceptjs run --steps",
 		"codeceptjs:ui": "codecept-ui --app",

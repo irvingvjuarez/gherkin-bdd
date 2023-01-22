@@ -12,3 +12,7 @@ When(/The user logins into the page with the correct email: "(.+)" and password:
 Then("The user should access to the dashboard", () => {
 	login.verifySuccessfulLogin()
 })
+
+When(/The user logins into the page with my (.+) and (.+)/, (email, password) => {
+	login.submitLoginForm(email, password)
+})
